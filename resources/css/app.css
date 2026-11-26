@@ -9,8 +9,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Momentje fonts */
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
 
+    /* Momentje colors */
+    --color-navy: #263650;
+    --color-terracotta: #B85D3B;
+    --color-earth: #845448;
+    --color-blush: #D2B7B1;
+    --color-cream: #FBF3EF;
+
+    /* Flux colors */
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;
     --color-zinc-200: #e5e5e5;
@@ -37,7 +47,6 @@
 }
 
 @layer base {
-
     *,
     ::after,
     ::before,
@@ -45,14 +54,23 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+
+    body {
+        font-family: var(--font-sans);
+        font-size: 18px;
+        line-height: 1.7;
+        background-color: #fff;
+        color: #000;
+    }
 }
 
+/* Flux form styling */
 [data-flux-field]:not(ui-radio, ui-checkbox) {
     @apply grid gap-2;
 }
 
 [data-flux-label] {
-    @apply  !mb-0 !leading-tight;
+    @apply !mb-0 !leading-tight;
 }
 
 input:focus[data-flux-control],
@@ -61,6 +79,35 @@ select:focus[data-flux-control] {
     @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
 }
 
-/* \[:where(&)\]:size-4 {
-    @apply size-4;
-} */
+/* Visible focus indicators */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-terracotta) !important;
+    outline-offset: 3px !important;
+}
+
+/* Hide Alpine elements until Alpine has loaded */
+[x-cloak] {
+    display: none !important;
+}
+
+.fade-transition {
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* Menu item while focused or clicked */
+.momentje-menu [data-flux-menu-item]:focus,
+.momentje-menu [data-flux-menu-item]:active,
+.momentje-menu [data-flux-menu-item][data-focus] {
+    background-color: #d2b7b1;
+    color: #263650;
+}
+
+/* Keep keyboard focus visible */
+.momentje-menu [data-flux-menu-item]:focus-visible {
+    outline: 2px solid #b85d3b;
+    outline-offset: 2px;
+}
