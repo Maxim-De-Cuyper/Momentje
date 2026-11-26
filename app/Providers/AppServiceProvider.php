@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Foundation\DevCommands;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
@@ -19,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Register Mailpit for the local development environment
         if ($this->app->environment('local')) {
-            \Illuminate\Foundation\DevCommands::register('mailpit', 'mailpit')->blue();
+            DevCommands::register('mailpit', 'mailpit')->blue();
         }
     }
 
@@ -34,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
             app()->isProduction(),
         );
 
-        Password::defaults(fn(): ?Password => app()->isProduction()
+        Password::defaults(fn (): ?Password => app()->isProduction()
             ? Password::min(12)
                 ->mixedCase()
                 ->letters()
