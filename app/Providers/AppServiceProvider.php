@@ -11,19 +11,16 @@ use Illuminate\Validation\Rules\Password;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-        //
-    }
-
-    /**
      * Bootstrap any application services.
      */
     public function boot(): void
     {
         $this->configureDefaults();
+
+        // Register Mailpit for the local development environment
+        if ($this->app->environment('local')) {
+            \Illuminate\Foundation\DevCommands::register('mailpit', 'mailpit')->blue();
+        }
     }
 
     /**
@@ -37,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             app()->isProduction(),
         );
 
-        Password::defaults(fn (): ?Password => app()->isProduction()
+        Password::defaults(fn(): ?Password => app()->isProduction()
             ? Password::min(12)
                 ->mixedCase()
                 ->letters()
@@ -46,5 +43,13 @@ class AppServiceProvider extends ServiceProvider
                 ->uncompromised()
             : null,
         );
+    }
+
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
     }
 }
