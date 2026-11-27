@@ -253,142 +253,89 @@
             </div>
 
             <!-- 3 Horizontal Step Cards with Directional Arrows -->
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch relative">
 
-                {{-- Step 1 --}}
+                <!-- Step 1 Card -->
                 <div
-                    class="relative flex h-full flex-col overflow-hidden rounded-3xl
-               border border-blush/70 bg-white p-6 shadow-sm
-               transition-shadow hover:shadow-md sm:p-8"
-                >
-                    <div class="mb-7 flex items-center justify-between">
-                        <div
-                            class="flex h-14 w-14 items-center justify-center
-                       rounded-2xl bg-cream text-terracotta"
-                        >
-                            <flux:icon
-                                name="chat-bubble-left-right"
-                                class="size-7 !text-current"
-                            />
-                        </div>
-
-                        <span
-                            class="font-serif text-3xl font-bold text-blush"
-                            aria-hidden="true"
-                        >
-                01
-            </span>
-                    </div>
-
+                    class="relative bg-white border-2 border-navy/20 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
-            <span
-                class="text-xs font-extrabold uppercase tracking-widest
-                       text-earth"
-            >
-                Stap 1
-            </span>
-
-                        <h3 class="font-serif text-2xl font-bold leading-snug text-navy">
+                        <div
+                            class="w-11 h-11 rounded-2xl bg-navy text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
+                            1
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-navy">
                             Kies een gespreksonderwerp
                         </h3>
-
-                        <p class="text-base leading-relaxed text-black">
+                        <p class="text-black text-base leading-relaxed">
                             Welk liedje brengt je 20 jaar terug in de tijd?
                         </p>
                     </div>
 
-                    <div class="mt-8 h-1 w-12 rounded-full bg-terracotta"></div>
+                    <!-- Arrow 1 -> 2 (Desktop right, Mobile down) -->
+                    <div
+                        class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border-2 border-navy rounded-full items-center justify-center text-navy shadow-sm"
+                        aria-hidden="true">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </div>
+                    <div class="flex lg:hidden justify-center pt-2 text-navy" aria-hidden="true">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
+                        </svg>
+                    </div>
                 </div>
 
-                {{-- Step 2 --}}
+                <!-- Step 2 Card -->
                 <div
-                    class="relative flex h-full flex-col overflow-hidden rounded-3xl
-               border border-blush/70 bg-white p-6 shadow-sm
-               transition-shadow hover:shadow-md sm:p-8"
-                >
-                    <div class="mb-7 flex items-center justify-between">
-                        <div
-                            class="flex h-14 w-14 items-center justify-center
-                       rounded-2xl bg-cream text-terracotta"
-                        >
-                            <flux:icon
-                                name="camera"
-                                class="size-7 !text-current"
-                            />
-                        </div>
-
-                        <span
-                            class="font-serif text-3xl font-bold text-blush"
-                            aria-hidden="true"
-                        >
-                02
-            </span>
-                    </div>
-
+                    class="relative bg-white border-2 border-terracotta/40 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
-            <span
-                class="text-xs font-extrabold uppercase tracking-widest
-                       text-earth"
-            >
-                Stap 2
-            </span>
-
-                        <h3 class="font-serif text-2xl font-bold leading-snug text-navy">
+                        <div
+                            class="w-11 h-11 rounded-2xl bg-terracotta text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
+                            2
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-navy">
                             Bewaar wat jullie beleven
                         </h3>
-
-                        <p class="text-base leading-relaxed text-black">
-                            Laat jullie gesprek omvormen tot een tekst en voeg een
-                            mooie foto toe.
+                        <p class="text-black italic text-base leading-relaxed">
+                            De app vormt jullie gesprek om naar een tekst, trek een leuke foto
                         </p>
                     </div>
 
-                    <div class="mt-8 h-1 w-12 rounded-full bg-terracotta"></div>
+                    <!-- Arrow 2 -> 3 (Desktop right, Mobile down) -->
+                    <div
+                        class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border-2 border-terracotta rounded-full items-center justify-center text-terracotta shadow-sm"
+                        aria-hidden="true">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </div>
+                    <div class="flex lg:hidden justify-center pt-2 text-terracotta" aria-hidden="true">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
+                        </svg>
+                    </div>
                 </div>
 
-                {{-- Step 3 --}}
+                <!-- Step 3 Card -->
                 <div
-                    class="relative flex h-full flex-col overflow-hidden rounded-3xl
-               border border-blush/70 bg-white p-6 shadow-sm
-               transition-shadow hover:shadow-md sm:p-8"
-                >
-                    <div class="mb-7 flex items-center justify-between">
-                        <div
-                            class="flex h-14 w-14 items-center justify-center
-                       rounded-2xl bg-cream text-terracotta"
-                        >
-                            <flux:icon
-                                name="book-open"
-                                class="size-7 !text-current"
-                            />
-                        </div>
-
-                        <span
-                            class="font-serif text-3xl font-bold text-blush"
-                            aria-hidden="true"
-                        >
-                03
-            </span>
-                    </div>
-
+                    class="relative bg-white border-2 border-earth/40 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
-            <span
-                class="text-xs font-extrabold uppercase tracking-widest
-                       text-earth"
-            >
-                Stap 3
-            </span>
-
-                        <h3 class="font-serif text-2xl font-bold leading-snug text-navy">
+                        <div
+                            class="w-11 h-11 rounded-2xl bg-earth text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
+                            3
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-navy">
                             Kijk er samen op terug
                         </h3>
-
-                        <p class="text-base leading-relaxed text-black">
-                            Bekijk jullie momentjes opnieuw in een persoonlijk fotoboek.
+                        <p class="text-black italic text-base leading-relaxed">
+                            Bekijk jullie momentje in het fotoboek
                         </p>
                     </div>
-
-                    <div class="mt-8 h-1 w-12 rounded-full bg-terracotta"></div>
                 </div>
 
             </div>
