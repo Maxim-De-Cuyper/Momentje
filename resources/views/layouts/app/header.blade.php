@@ -43,59 +43,40 @@
     >
         {{-- Logo --}}
         <a
-            href="#over"
-            class="flex min-w-0 items-center gap-2 sm:gap-3"
-            aria-label="Momentje: naar het begin van de pagina"
+            href="{{ route('home') }}"
+            wire:navigate
+            aria-label="Momentje: naar de homepage"
+            class="group flex min-w-0 items-center gap-3"
         >
+            {{-- Logo image --}}
             <div
-                class="flex h-10 w-11 shrink-0 items-center justify-center
-                       rounded-xl border border-blush/80 bg-white p-1.5
-                       shadow-sm sm:h-11 sm:w-12 sm:rounded-2xl"
+                class="flex h-11 w-12 shrink-0 items-center justify-center
+               transition-colors group-hover:border-terracotta
+               sm:h-12 sm:w-14"
             >
-                <svg
-                    viewBox="0 0 240 120"
-                    class="h-full w-full"
-                    aria-hidden="true"
+                <img
+                    src="{{ asset('lemniscaat - Blauw.svg') }}"
+                    alt=""
+                    class="h-full w-full object-contain"
                 >
-                    <defs>
-                        <linearGradient
-                            id="lemniscaatGradHeader"
-                            x1="0%"
-                            y1="0%"
-                            x2="0%"
-                            y2="100%"
-                        >
-                            <stop offset="0%" stop-color="#B85D3B"/>
-                            <stop offset="52%" stop-color="#764B45"/>
-                            <stop offset="100%" stop-color="#263650"/>
-                        </linearGradient>
-                    </defs>
-
-                    <path
-                        d="M 120 60 C 90 18, 22 18, 22 60 C 22 102, 90 102, 120 60 C 150 18, 218 18, 218 60 C 218 102, 150 102, 120 60 Z"
-                        fill="none"
-                        stroke="url(#lemniscaatGradHeader)"
-                        stroke-width="18"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                </svg>
             </div>
 
+            {{-- Brand name --}}
             <div class="flex min-w-0 flex-col">
-                <span
-                    class="font-serif text-xl font-bold tracking-tight
-                           text-navy sm:text-2xl"
-                >
-                    Momentje
-                </span>
+        <span
+            class="font-serif text-xl font-bold leading-tight tracking-tight
+                   text-navy transition-colors group-hover:text-terracotta
+                   sm:text-2xl"
+        >
+            Momentje
+        </span>
 
                 <span
-                    class="hidden text-[10px] font-bold uppercase
-                           tracking-wider text-earth sm:block"
+                    class="hidden text-[10px] font-bold uppercase tracking-wider
+                   text-earth sm:block"
                 >
-                    Warme familieherinneringen
-                </span>
+            Warme familieherinneringen
+        </span>
             </div>
         </a>
 
