@@ -74,7 +74,7 @@
                    hover:border-terracotta hover:bg-terracotta
                    hover:text-white"
         >
-            <span aria-hidden="true">✉️</span>
+            <span aria-hidden="true"><flux:icon.envelope/></span>
             <span>Stuur me dit idee via mail</span>
         </button>
     </flux:card>

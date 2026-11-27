@@ -119,8 +119,9 @@
     }"
                             class="bg-white border-2 border-terracotta rounded-2xl p-6 space-y-4 shadow-xs"
                         >
-                            <div class="text-xs font-extrabold uppercase tracking-wider text-earth">
-                                💡 Vraag van de dag
+                            <div class="flex items-center text-xs font-extrabold uppercase tracking-wider text-earth">
+                                <flux:icon.light-bulb variant="micro"/>
+                                Vraag van de dag
                             </div>
 
                             <p
@@ -241,192 +242,269 @@
     <section id="zo-werkt-momentje" class="py-16 md:py-24 bg-cream border-b border-blush/40">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
-            <!-- Section Header -->
+            <!-- Section header -->
             <div class="text-center space-y-3">
-                    <span
-                        class="text-xs font-extrabold uppercase tracking-widest text-earth bg-white px-4 py-1.5 rounded-full border border-blush inline-block">
-                        Stap voor stap
-                    </span>
+            <span
+                class="text-xs font-extrabold uppercase tracking-widest text-earth bg-white px-4 py-1.5 rounded-full border border-blush inline-block"
+            >
+                Stap voor stap
+            </span>
+
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy">
                     Zo werkt <span class="text-terracotta">Momentje</span>
                 </h2>
             </div>
 
-            <!-- 3 Horizontal Step Cards with Directional Arrows -->
+            <!-- Step cards -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch relative">
 
-                <!-- Step 1 Card -->
-                <div
-                    class="relative bg-white border-2 border-navy/20 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div
-                            class="w-11 h-11 rounded-2xl bg-navy text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
-                            1
-                        </div>
-                        <h3 class="font-serif font-bold text-2xl text-navy">
-                            Kies een gespreksonderwerp
-                        </h3>
-                        <p class="text-black text-base leading-relaxed">
-                            Welk liedje brengt je 20 jaar terug in de tijd?
-                        </p>
-                    </div>
+                <!-- Step 1 -->
+                <div class="relative">
 
-                    <!-- Arrow 1 -> 2 (Desktop right, Mobile down) -->
                     <div
-                        class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border-2 border-navy rounded-full items-center justify-center text-navy shadow-sm"
-                        aria-hidden="true">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </div>
-                    <div class="flex lg:hidden justify-center pt-2 text-navy" aria-hidden="true">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
-                        </svg>
-                    </div>
-                </div>
+                        class="group relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl"
+                    >
 
-                <!-- Step 2 Card -->
-                <div
-                    class="relative bg-white border-2 border-terracotta/40 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div
-                            class="w-11 h-11 rounded-2xl bg-terracotta text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
-                            2
+                        <div class="absolute inset-x-0 top-0 h-2 bg-navy"></div>
+
+                        <span
+                            class="pointer-events-none absolute -right-2 top-2 select-none font-serif text-9xl font-bold leading-none text-navy/5"
+                            aria-hidden="true"
+                        >
+                        1
+                    </span>
+
+                        <div class="relative flex h-full flex-col">
+
+                            <!-- Flux icon -->
+                            <div
+                                class="mb-8 flex h-16 items-center text-navy origin-left transition-transform duration-300 ease-out group-hover:scale-110"
+                            >
+                                <flux:icon.chat-bubble-left-right class="size-10"/>
+                            </div>
+
+                            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-navy/50">
+                                Stap 01 · Ontdek
+                            </p>
+
+                            <h3 class="font-serif text-2xl font-bold leading-tight text-navy">
+                                Kies een gespreksonderwerp
+                            </h3>
+
+                            <p class="mt-4 text-base leading-relaxed text-navy/70">
+                                Welk liedje brengt je 20 jaar terug in de tijd?
+                            </p>
+
+                            <div class="mt-8 h-px w-12 bg-navy/20"></div>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-navy">
-                            Bewaar wat jullie beleven
-                        </h3>
-                        <p class="text-black italic text-base leading-relaxed">
-                            De app vormt jullie gesprek om naar een tekst, trek een leuke foto
-                        </p>
                     </div>
 
-                    <!-- Arrow 2 -> 3 (Desktop right, Mobile down) -->
+                    <!-- Arrow to step 2 -->
                     <div
-                        class="hidden lg:flex absolute -right-7 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border-2 border-terracotta rounded-full items-center justify-center text-terracotta shadow-sm"
-                        aria-hidden="true">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </div>
-                    <div class="flex lg:hidden justify-center pt-2 text-terracotta" aria-hidden="true">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6"/>
-                        </svg>
+                        class="pointer-events-none absolute -bottom-4 left-1/2 z-10 flex h-7 w-7 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-white text-navy shadow-sm lg:-right-4 lg:bottom-auto lg:left-auto lg:top-1/2 lg:translate-x-1/2 lg:-translate-y-1/2"
+                        aria-hidden="true"
+                    >
+                        <flux:icon.arrow-right class="size-4 rotate-90 lg:rotate-0"/>
                     </div>
                 </div>
 
-                <!-- Step 3 Card -->
-                <div
-                    class="relative bg-white border-2 border-earth/40 rounded-3xl p-7 shadow-xs flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div
-                            class="w-11 h-11 rounded-2xl bg-earth text-white flex items-center justify-center font-serif font-bold text-xl shadow-xs">
-                            3
+                <!-- Step 2 -->
+                <div class="relative">
+
+                    <div
+                        class="group relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl"
+                    >
+
+                        <div class="absolute inset-x-0 top-0 h-2 bg-terracotta"></div>
+
+                        <span
+                            class="pointer-events-none absolute -right-2 top-2 select-none font-serif text-9xl font-bold leading-none text-terracotta/10"
+                            aria-hidden="true"
+                        >
+                        2
+                    </span>
+
+                        <div class="relative flex h-full flex-col">
+
+                            <!-- Flux icon -->
+                            <div
+                                class="mb-8 flex h-16 items-center text-terracotta origin-left transition-transform duration-300 ease-out group-hover:scale-110"
+                            >
+                                <flux:icon.camera class="size-10"/>
+                            </div>
+
+                            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-terracotta">
+                                Stap 02 · Bewaar
+                            </p>
+
+                            <h3 class="font-serif text-2xl font-bold leading-tight text-navy">
+                                Bewaar wat jullie beleven
+                            </h3>
+
+                            <p class="mt-4 text-base leading-relaxed text-navy/70">
+                                De app vormt jullie gesprek om naar een tekst. Trek ook een leuke foto.
+                            </p>
+
+                            <div class="mt-8 h-px w-12 bg-terracotta/40"></div>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-navy">
-                            Kijk er samen op terug
-                        </h3>
-                        <p class="text-black italic text-base leading-relaxed">
-                            Bekijk jullie momentje in het fotoboek
-                        </p>
+                    </div>
+
+                    <!-- Arrow to step 3 -->
+                    <div
+                        class="pointer-events-none absolute -bottom-4 left-1/2 z-10 flex h-7 w-7 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-white text-terracotta shadow-sm lg:-right-4 lg:bottom-auto lg:left-auto lg:top-1/2 lg:translate-x-1/2 lg:-translate-y-1/2"
+                        aria-hidden="true"
+                    >
+                        <flux:icon.arrow-right class="size-4 rotate-90 lg:rotate-0"/>
                     </div>
                 </div>
 
+                <!-- Step 3 -->
+                <div class="relative">
+
+                    <div
+                        class="group relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl"
+                    >
+
+                        <div class="absolute inset-x-0 top-0 h-2 bg-earth"></div>
+
+                        <span
+                            class="pointer-events-none absolute -right-2 top-2 select-none font-serif text-9xl font-bold leading-none text-earth/10"
+                            aria-hidden="true"
+                        >
+                        3
+                    </span>
+
+                        <div class="relative flex h-full flex-col">
+
+                            <!-- Flux icon -->
+                            <div
+                                class="mb-8 flex h-16 items-center text-earth origin-left transition-transform duration-300 ease-out group-hover:scale-110"
+                            >
+                                <flux:icon.book-open class="size-10"/>
+                            </div>
+
+                            <p class="mb-3 text-xs font-bold uppercase tracking-widest text-earth">
+                                Stap 03 · Herbeleef
+                            </p>
+
+                            <h3 class="font-serif text-2xl font-bold leading-tight text-navy">
+                                Kijk er samen op terug
+                            </h3>
+
+                            <p class="mt-4 text-base leading-relaxed text-navy/70">
+                                Bekijk jullie momentje in het fotoboek.
+                            </p>
+
+                            <div class="mt-8 h-px w-12 bg-earth/40"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Book Page Example Box: Photo + Quote -->
+            <!-- Book page example -->
             <div class="bg-white border-2 border-navy/25 rounded-3xl p-6 sm:p-10 shadow-md space-y-6">
 
-                <!-- Top Label Bar -->
+                <!-- Top label bar -->
                 <div
                     class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-slate-200 pb-4">
                     <h3 class="font-serif font-bold text-xl sm:text-2xl text-navy">
                         Voorbeeld van een pagina uit het boek: foto + quote
                     </h3>
+
                     <span
-                        class="inline-block self-start sm:self-auto text-xs font-extrabold uppercase tracking-wider text-earth bg-cream px-3.5 py-1.5 rounded-full border border-blush">
-                            Momentjesboek • Pagina 14
-                        </span>
+                        class="inline-block self-start sm:self-auto text-xs font-extrabold uppercase tracking-wider text-earth bg-cream px-3.5 py-1.5 rounded-full border border-blush"
+                    >
+                    Momentjesboek • Pagina 14
+                </span>
                 </div>
 
-                <!-- Two-Page / Split Book Spread Layout -->
+                <!-- Book spread -->
                 <div
                     class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cream/60 border border-blush rounded-2xl p-6 sm:p-8">
 
-                    <!-- Left Side: Framed Polaroid / Photo Card -->
+                    <!-- Photo -->
                     <div class="md:col-span-5">
                         <div
                             class="bg-white p-3 pb-6 rounded-xl shadow-md border border-blush/80 transform -rotate-1 space-y-3">
+
                             <div
                                 class="aspect-4/3 w-full rounded-lg bg-cream overflow-hidden border border-blush/50 flex items-center justify-center">
-                                <!-- Warm Family Music & Coffee SVG Illustration -->
-                                <svg viewBox="0 0 320 240" class="w-full h-full" role="img"
-                                     aria-label="Illustratie van een gezellig koffiemomentje met muziek en familie">
+
+                                <svg
+                                    viewBox="0 0 320 240"
+                                    class="w-full h-full"
+                                    role="img"
+                                    aria-label="Illustratie van een gezellig koffiemomentje met muziek en familie"
+                                >
                                     <rect width="320" height="240" fill="#FBF3EF"/>
-                                    <!-- Warm window & sunbeams -->
-                                    <rect x="28" y="24" width="90" height="105" rx="10" fill="#FFFFFF"
-                                          stroke="#D2B7B1" stroke-width="3"/>
+
+                                    <!-- Window -->
+                                    <rect x="28" y="24" width="90" height="105" rx="10" fill="#FFFFFF" stroke="#D2B7B1"
+                                          stroke-width="3"/>
                                     <line x1="73" y1="24" x2="73" y2="129" stroke="#D2B7B1" stroke-width="2.5"/>
                                     <line x1="28" y1="76" x2="118" y2="76" stroke="#D2B7B1" stroke-width="2.5"/>
                                     <circle cx="94" cy="48" r="12" fill="#B85D3B" opacity="0.25"/>
-                                    <!-- Floating music notes -->
+
+                                    <!-- Music notes -->
                                     <g fill="#B85D3B">
                                         <circle cx="178" cy="58" r="5"/>
                                         <path d="M182 58V34l14-4v24" fill="none" stroke="#B85D3B" stroke-width="2.5"
                                               stroke-linecap="round"/>
                                         <circle cx="192" cy="54" r="5"/>
                                     </g>
+
                                     <g fill="#263650">
                                         <circle cx="236" cy="44" r="4.5"/>
                                         <path d="M240 44V24" stroke="#263650" stroke-width="2.5"
                                               stroke-linecap="round"/>
-                                        <path d="M240 24c6 2 8 6 8 10" fill="none" stroke="#263650"
-                                              stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M240 24c6 2 8 6 8 10" fill="none" stroke="#263650" stroke-width="2.5"
+                                              stroke-linecap="round"/>
                                     </g>
-                                    <!-- Grandmother & Family Member Silhouettes -->
-                                    <!-- Left figure (Grandma) -->
+
+                                    <!-- Grandmother -->
                                     <circle cx="115" cy="112" r="22" fill="#D2B7B1"/>
                                     <circle cx="115" cy="92" r="11" fill="#845448"/>
                                     <path d="M80 176c0-22 16-36 35-36s35 14 35 36" fill="#263650"/>
-                                    <!-- Right figure (Family member) -->
+
+                                    <!-- Family member -->
                                     <circle cx="205" cy="108" r="22" fill="#D2B7B1"/>
                                     <path d="M184 102c4-15 38-15 42 0" fill="#845448"/>
                                     <path d="M168 176c0-24 17-38 37-38s37 14 37 38" fill="#B85D3B"/>
-                                    <!-- Warm heart between them -->
+
+                                    <!-- Heart -->
                                     <path d="M160 112c-4-6-12-6-15 0-3 6 4 12 15 20 11-8 18-14 15-20-3-6-11-6-15 0z"
                                           fill="#B85D3B"/>
-                                    <!-- Cozy Coffee Table & Cups -->
+
+                                    <!-- Table -->
                                     <rect x="45" y="174" width="230" height="12" rx="6" fill="#845448"/>
                                     <rect x="70" y="186" width="12" height="40" fill="#845448"/>
                                     <rect x="238" y="186" width="12" height="40" fill="#845448"/>
-                                    <!-- Coffee cups & cake plate -->
-                                    <rect x="112" y="158" width="18" height="16" rx="3" fill="#FFFFFF"
-                                          stroke="#263650" stroke-width="2"/>
-                                    <rect x="190" y="158" width="18" height="16" rx="3" fill="#FFFFFF"
-                                          stroke="#263650" stroke-width="2"/>
+
+                                    <!-- Cups and cake -->
+                                    <rect x="112" y="158" width="18" height="16" rx="3" fill="#FFFFFF" stroke="#263650"
+                                          stroke-width="2"/>
+                                    <rect x="190" y="158" width="18" height="16" rx="3" fill="#FFFFFF" stroke="#263650"
+                                          stroke-width="2"/>
                                     <ellipse cx="160" cy="171" rx="22" ry="4" fill="#FFFFFF" stroke="#D2B7B1"
                                              stroke-width="2"/>
                                     <path d="M148 169l12-12 12 12z" fill="#B85D3B"/>
                                 </svg>
                             </div>
+
                             <p class="font-serif italic text-center text-sm font-semibold text-navy">
                                 Zondagnamiddag bij oma &amp; opa • Oktober 2026
                             </p>
                         </div>
                     </div>
 
-                    <!-- Right Side: Quote & Story Details -->
+                    <!-- Quote and story -->
                     <div class="md:col-span-7 space-y-4">
-                            <span
-                                class="inline-block text-xs font-extrabold uppercase tracking-wider text-earth bg-white px-3 py-1 rounded-full border border-blush">
-                                🎵 Muziek &amp; Herinneringen
-                            </span>
+
+                    <span
+                        class="inline-block text-xs font-extrabold uppercase tracking-wider text-earth bg-white px-3 py-1 rounded-full border border-blush"
+                    >
+                        🎵 Muziek &amp; Herinneringen
+                    </span>
 
                         <h4 class="font-serif font-bold text-navy text-xl sm:text-2xl">
                             Welk liedje brengt je 20 jaar terug in de tijd?
@@ -445,7 +523,6 @@
                     </div>
 
                 </div>
-
             </div>
 
         </div>
@@ -505,7 +582,7 @@
         </div>
     </section>
 
-    <!-- INSPIRATIE & IK WIL IETS DOEN SECTION (#inspiratie) - Soft Warm Cream Background -->
+    <!-- INSPIRATIE & IK WIL IETS DOEN SECTION -->
     <section
         id="inspiratie"
         class="border-b border-blush/40 bg-cream py-16 md:py-24"
@@ -574,6 +651,7 @@
                 aria-label="Inspiratie voor activiteiten"
                 aria-roledescription="carrousel"
             >
+
                 {{-- Titel en knoppen --}}
                 <div
                     class="flex flex-col gap-4 border-b-2 border-blush/60 pb-4
@@ -587,10 +665,7 @@
                         Samen op pad &amp; bezig zijn
                     </span>
 
-                        <h3
-                            class="mt-1 font-serif text-2xl font-bold
-                               text-navy md:text-3xl"
-                        >
+                        <h3 class="mt-1 font-serif text-2xl font-bold text-navy md:text-3xl">
                             Ik wil iets
                             <span class="text-terracotta">doen</span>
                         </h3>
@@ -600,15 +675,42 @@
                         </p>
                     </div>
 
+
+                </div>
+
+                {{-- Activiteitenkaarten --}}
+                <div
+                    class="relative mx-auto h-[440px] w-full max-w-6xl
+                       overflow-hidden sm:h-[440px]"
+                >
+                    @foreach ($activities as $index => $activity)
+                        <div
+                            class="contents"
+                            :class="current === {{ $index }}
+                            ? '[&>*]:brightness-100'
+                            : '[&>*]:brightness-75'"
+                            :inert="current !== {{ $index }}"
+                        >
+                            <x-activity-card
+                                :index="$index"
+                                :icon="$activity['icon']"
+                                :title="$activity['title']"
+                                :description="$activity['description']"
+                            />
+                        </div>
+                    @endforeach
+                </div>
+                <div class="flex w-full items-center justify-center">
                     <div class="flex items-center gap-3">
+
                         <button
                             type="button"
                             @click="previous()"
                             aria-label="Vorige activiteit"
                             class="flex h-11 w-11 items-center justify-center
-                               rounded-full border-2 border-navy bg-white
-                               text-xl font-bold text-navy transition-colors
-                               hover:bg-navy hover:text-white"
+                   rounded-full border-2 border-navy bg-white
+                   text-xl font-bold text-navy transition-colors
+                   hover:bg-navy hover:text-white"
                         >
                             <span aria-hidden="true">←</span>
                         </button>
@@ -624,29 +726,16 @@
                             @click="next()"
                             aria-label="Volgende activiteit"
                             class="flex h-11 w-11 items-center justify-center
-                               rounded-full border-2 border-navy bg-white
-                               text-xl font-bold text-navy transition-colors
-                               hover:bg-navy hover:text-white"
+                   rounded-full border-2 border-navy bg-white
+                   text-xl font-bold text-navy transition-colors
+                   hover:bg-navy hover:text-white"
                         >
                             <span aria-hidden="true">→</span>
                         </button>
+
                     </div>
                 </div>
 
-                {{-- Elke kaart is een Blade-component --}}
-                <div
-                    class="relative mx-auto h-[440px] w-full max-w-6xl
-                       overflow-hidden sm:h-[440px]"
-                >
-                    @foreach ($activities as $index => $activity)
-                        <x-activity-card
-                            :index="$index"
-                            :icon="$activity['icon']"
-                            :title="$activity['title']"
-                            :description="$activity['description']"
-                        />
-                    @endforeach
-                </div>
             </div>
         </div>
     </section>
@@ -1053,4 +1142,6 @@
             </div>
         </div>
     @endpush
+
+
 </x-layouts::momentje>
